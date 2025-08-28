@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- SEO: Sets description for search engines -->
+  <meta name="description" content="Learn the basics of HTML5 structure, accessibility, and SEO with this beginner-friendly sample web page.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 + Accessibility & SEO Basics</title>
+</head>
+<body>
+  <!-- Accessibility landmark: site header -->
+  <header>
+    <h1>Welcome to My Learning Page</h1>
+    <p>A simple demo of HTML5 semantic structure, accessibility, and SEO principles.</p>
+    
+    <!-- Semantic navigation -->
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#about" title="Learn about this page">About</a></li>
+        <li><a href="#articles" title="Read my articles">Articles</a></li>
+        <li><a href="#contact" title="Get in touch">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Accessibility landmark: main content -->
+  <main>
+    <!-- Section 1 -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About This Page</h2>
+      <p>
+        This page was created as part of an assignment to practice <strong>HTML5 semantic tags</strong>, 
+        improve <em>accessibility</em>, and learn beginner-friendly <abbr title="Search Engine Optimization">SEO</abbr>.
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="articles" aria-labelledby="articles-heading">
+      <h2 id="articles-heading">Latest Articles</h2>
+      
+      <article>
+        <h3>Building Accessible Websites</h3>
+        <p>
+          Accessibility ensures that people of all abilities can use and enjoy the web. 
+          Proper headings, labels, and ARIA attributes make content readable by screen readers.
+        </p>
+      </article>
+      
+      <article>
+        <h3>Why Semantic HTML Matters</h3>
+        <p>
+          Using semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and 
+          <code>&lt;footer&gt;</code> helps search engines understand your content better, 
+          and improves overall structure for both humans and machines.
+        </p>
+      </article>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>If you’d like to reach out, feel free to <a href="mailto:hello@example.com">send me an email</a>.</p>
+    </section>
+  </main>
+
+  <!-- Accessibility landmark: footer -->
+  <footer>
+    <p>Samuel Ayitey</p>
+    <p>&copy; 2025 My Learning Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>
