@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form - Enhanced HTML5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+    <!-- Header Section -->
+    <header class="py-12 bg-indigo-600 text-white text-center rounded-b-2xl shadow-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-extrabold mb-2">Registration Form</h1>
+            <p class="text-lg">Demonstrating modern HTML5 forms with validation and accessibility</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 my-12 space-y-12">
+        <!-- Intro Section -->
+        <section class="bg-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-4">Why a Good Form Matters</h2>
+            <p class="mb-6 text-gray-600">
+                A well-designed form is the backbone of user interaction. It's not just about collecting data; it's about providing a smooth and intuitive experience. This page demonstrates how using semantic HTML, proper attributes, and built-in validation can create forms that are both powerful and user-friendly.
+            </p>
+
+            <h3 class="text-2xl font-semibold mb-3">Key Features of This Form</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li><strong class="font-medium">Semantic Markup:</strong> Uses tags like `<form>`, `<fieldset>`, and `<label>` for clear structure.</li>
+                <li><strong class="font-medium">Built-in Validation:</strong> Utilizes HTML5 `required` and `pattern` attributes to check data before submission.</li>
+                <li><strong class="font-medium">Accessibility:</strong> `label` tags are correctly linked to inputs with the `for` attribute, helping screen readers.</li>
+            </ul>
+        </section>
+
+        <!-- Form Section -->
+        <section class="bg-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-6">User Registration</h2>
+            <form action="#" method="post" class="space-y-6">
+                <!-- Fieldset for Personal Information -->
+                <fieldset class="border-2 border-slate-200 rounded-xl p-6">
+                    <legend class="text-xl font-semibold px-2">Personal Information</legend>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                        <div>
+                            <label for="full-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name<span class="text-red-500">*</span></label>
+                            <input type="text" id="full-name" name="full-name" placeholder="John Doe" required autocomplete="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address<span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" autocomplete="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                            <p class="mt-1 text-xs text-gray-500">Format: 123-456-7890</p>
+                        </div>
+                        <div>
+                            <label for="age" class="block text-sm font-medium text-gray-700 mb-1">Age</label>
+                            <input type="number" id="age" name="age" min="18" max="120" placeholder="18-120" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Fieldset for Preferences -->
+                <fieldset class="border-2 border-slate-200 rounded-xl p-6">
+                    <legend class="text-xl font-semibold px-2">Preferences</legend>
+                    <div class="space-y-4 mt-4">
+                        <div>
+                            <label for="membership-tier" class="block text-sm font-medium text-gray-700 mb-1">Membership Tier</label>
+                            <select id="membership-tier" name="membership-tier" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                                <option value="basic">Basic</option>
+                                <option value="premium">Premium</option>
+                                <option value="gold">Gold</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="referral" class="block text-sm font-medium text-gray-700 mb-1">Referral Code</label>
+                            <input type="text" id="referral" name="referral" value="WELCOME50" readonly class="w-full p-3 border border-gray-300 bg-gray-100 cursor-not-allowed rounded-lg">
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <input type="checkbox" id="newsletter" name="newsletter" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                            <label for="newsletter" class="text-sm text-gray-700">Subscribe to our newsletter</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Textarea for comments -->
+                <div>
+                    <label for="comments" class="block text-sm font-medium text-gray-700 mb-1">Comments</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts here..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+                </div>
+                
+                <!-- Media Section -->
+                <fieldset class="border-2 border-slate-200 rounded-xl p-6">
+                    <legend class="text-xl font-semibold px-2">Related Media</legend>
+                    <figure class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60" alt="Team collaborating on laptops at a table" class="rounded-xl shadow-md w-full max-w-lg mx-auto">
+                        <figcaption class="mt-2 text-sm text-gray-500 text-center">Collaboration in action — a team working together.</figcaption>
+                    </figure>
+                    <figure>
+                        <audio controls class="w-full">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <figcaption class="mt-2 text-sm text-gray-500 text-center">A sample audio track for demonstration.</figcaption>
+                    </figure>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <div class="flex justify-center">
+                    <button type="submit" class="w-full md:w-auto px-8 py-3 bg-indigo-600 text-white font-bold rounded-full hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Table and Image Section -->
+        <section class="bg-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-6">Service Tiers</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse rounded-lg overflow-hidden">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="p-4 font-medium text-gray-600 rounded-tl-lg">Tier</th>
+                            <th class="p-4 font-medium text-gray-600">Features</th>
+                            <th class="p-4 font-medium text-gray-600 rounded-tr-lg">Price/Month</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white">
+                            <td class="p-4 border-b border-gray-200">Basic</td>
+                            <td class="p-4 border-b border-gray-200">Core features</td>
+                            <td class="p-4 border-b border-gray-200">$9.99</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="p-4 border-b border-gray-200">Premium</td>
+                            <td class="p-4 border-b border-gray-200">All features + priority support</td>
+                            <td class="p-4 border-b border-gray-200">$19.99</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-4">Gold</td>
+                            <td class="p-4">Everything + advanced analytics</td>
+                            <td class="p-4">$49.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="py-6 text-center text-sm text-gray-500 bg-white border-t border-gray-200 mt-12 rounded-t-2xl shadow-lg">
+        <p>&copy; 2025 Enhanced Forms Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
